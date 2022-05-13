@@ -8,8 +8,8 @@
     "variant": "standard"
   },
   "debug": {
-    "svd_path": "STM8AF528A.svd", // CAN and ADC registers missing (0x54XX)
-    "openocd_target": "stm8s" // right target missing
+    "svd_path": "STM8AF528A.svd",
+    "openocd_target": "stm8s"
   },
   "frameworks": [
     "arduino",
