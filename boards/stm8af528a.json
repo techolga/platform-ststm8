@@ -1,0 +1,30 @@
+{
+  "build": {
+    "core": "sduino",
+    "extra_flags": "-DSTM8AF52Ax",
+    "f_cpu": "16000000L",
+    "cpu": "stm8",
+    "mcu": "stm8af528a",
+    "variant": "standard"
+  },
+  "debug": {
+    "svd_path": "STM8AF528A.svd",
+    "openocd_target": "stm8s"
+  },
+  "frameworks": [
+    "arduino",
+    "spl"
+  ],
+  "upload": {
+    "maximum_ram_size": 6144,
+    "maximum_size": 65536,
+    "protocol": "stlinkv2",
+    "protocols": [
+      "serial",
+      "stlinkv2"
+    ]
+  },
+  "name": "ST STM8AF528A chip",
+  "url": "https://www.st.com/resource/en/datasheet/stm8af528a.pdf",
+  "vendor": "ST"
+}
