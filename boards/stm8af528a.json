@@ -22,7 +22,8 @@
     "protocols": [
       "serial",
       "stlinkv2"
-    ]
+    ],
+    "stm8flash_target": "stm8af528?"
   },
   "name": "ST STM8AF528A chip",
   "url": "https://www.st.com/resource/en/datasheet/stm8af528a.pdf",

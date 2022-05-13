@@ -41,9 +41,15 @@ def get_core_files():
         print("Warning! Couldn't find stm8s_conf.h file!")
         return []
 
+    build_mcu = board_config.get("build.mcu")[:9].upper()
+    if build_mcu[5] == 'S':
+        build_mcu = build_mcu[:8]
+    else:
+        build_mcu += 'x'
+
     command = [
         env.subst("$CC"), "-m%s" % board_config.get("build.cpu"),
-        "-D%s" % board_config.get("build.mcu")[0:8].upper(),
+        "-D%s" % build_mcu,
         "-I.", "-I", "%s" % env.subst("$PROJECT_SRC_DIR"),
         "-Wp-MM", "-E", "stm8s.h"
     ]
